@@ -30,20 +30,6 @@ Install-Module -Name MSOnline
 
 5. Click the `Export` button to export the search results to a CSV file.
 
-## Functions
-
-### Connect-MSOnlineServices
-
-This function connects to MS Online Services and prompts the user to enter their credentials.
-
-### Search-UsersByLicense
-
-This function searches for users based on the selected AccountSku and displays the results in the DataGridView.
-
-### Export-UsersByLicense
-
-This function exports the search results to a CSV file.
-
 ## Built With
 
 * PowerShell
