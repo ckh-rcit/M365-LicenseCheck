@@ -2,6 +2,8 @@
 This script allows you to connect to Microsoft Online Services and search for users based on their license. 
 It also provides an option to export the search results to a CSV file.
 
+![](https://i.imgur.com/XdPDIxZ.png)
+
 ## Getting Started
 
 ### Prerequisites
