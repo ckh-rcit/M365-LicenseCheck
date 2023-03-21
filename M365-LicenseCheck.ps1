@@ -39,6 +39,10 @@ function Export-UsersByLicense {
     }
 }
 
+function Clear-DataGridView {
+    $dataGridView.Rows.Clear()
+}
+
 # Create main form
 $form = New-Object System.Windows.Forms.Form
 $form.Size = New-Object System.Drawing.Size(800, 600)
@@ -83,6 +87,14 @@ $dataGridView.Columns[0].Name = "Display Name"
 $dataGridView.Columns[1].Name = "User Principal Name"
 $dataGridView.AutoSizeColumnsMode = [System.Windows.Forms.DataGridViewAutoSizeColumnsMode]::Fill
 $form.Controls.Add($dataGridView)
+
+# Clear button
+$clearBTN = New-Object System.Windows.Forms.Button
+$clearBTN.Location = New-Object System.Drawing.Point(740, 10)
+$clearBTN.Size = New-Object System.Drawing.Size(30, 30)
+$clearBTN.Text = "X"
+$clearBTN.Add_Click({Clear-DataGridView})
+$form.Controls.Add($clearBTN)
 
 # Show form
 $form.Add_Shown({$form.Activate()})
